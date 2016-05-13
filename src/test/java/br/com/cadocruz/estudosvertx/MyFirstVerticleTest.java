@@ -14,6 +14,7 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.ext.unit.Async;
 import io.vertx.ext.unit.TestContext;
 import io.vertx.ext.unit.junit.VertxUnitRunner;
+
 /*
 @RunWith(VertxUnitRunner.class)
 public class MyFirstVerticleTest {
@@ -32,7 +33,7 @@ public class MyFirstVerticleTest {
 		DeploymentOptions options = new DeploymentOptions()
 		    .setConfig(new JsonObject().put("http.port", port)
 		);
-		//vertx.deployVerticle(MyFirstVerticle.class.getName(), options, context.asyncAssertSuccess());
+		vertx.deployVerticle("WhiskyVerticle", options, context.asyncAssertSuccess());
 	}
 
 	@After
